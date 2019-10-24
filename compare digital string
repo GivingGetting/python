@@ -1,0 +1,52 @@
+
+
+num1 = ""
+num2 = ""
+
+while len(num1) == 0:
+    num1 = input("Enter first number: ")
+    
+while len(num2) == 0:
+    num2 = input("Enter second number: ")
+    
+    
+def rmzero(num):
+    while int(num[0])==0 and len(num)>1:
+        num=num[1:]
+    return num
+
+def printbigger():
+    print(num1 + " is bigger than " + num2)
+
+def printsmaller():
+    print(num1 + " is smaller than " + num2)
+
+def printequal():
+    print(num1 + " is equal to " + num2)
+    
+def compare(n1,n2):
+    i=0
+    while i<len(n1):
+        if n1[i]>n2[i]:
+            printbigger()
+            break
+        elif n1[i]<n2[i]:
+            printsmaller()
+            break
+        else:
+            if i==len(n1)-1:
+                printequal()
+        ++i
+
+n1=rmzero(num1)  
+n2=rmzero(num2)
+
+print(n1)
+print(n2)
+
+if len(n1)>len(n2):
+    printbigger()
+elif len(n1)<len(n2):
+    printsmaller()
+else:
+    compare(n1,n2)
