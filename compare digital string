@@ -36,6 +36,7 @@ def compare(n1,n2):
         else:
             if i==len(n1)-1:
                 printequal()
+                break
         ++i
 
 n1=rmzero(num1)  
